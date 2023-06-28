@@ -43,19 +43,19 @@ def main(args=sys.argv[1:]):
         sys.exit(1)
 
     # Load the task.json file, which contains the settings for the processing module
-    # try:
-    #     with open(Path(in_folder) / "task.json", "r") as json_file:
-    #         task = json.load(json_file)
-    # except Exception:
-    #     print("Error: Task file task.json not found")
-    #     sys.exit(1)
+    try:
+        with open(Path(in_folder) / "task.json", "r") as json_file:
+            task = json.load(json_file)
+    except Exception:
+        print("Error: Task file task.json not found")
+        sys.exit(1)
 
     # Create default values for all module settings
     settings = {"trained_model": "S2_osem_b10_fdg_pe2i"}
 
     # Overwrite default values with settings from the task file (if present)
-    # if task.get("process", ""):
-    #     settings.update(task["process"].get("settings", {}))
+    if task.get("process", ""):
+        settings.update(task["process"].get("settings", {}))
 
     
     # create directories for PET and MRI input files

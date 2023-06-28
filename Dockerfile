@@ -1,5 +1,10 @@
 FROM continuumio/miniconda3
 RUN conda update -n base -c defaults conda
+
+RUN mkdir -m777 /app
+WORKDIR /app
+
+ADD pyapetnet_process.py ./
 ADD docker-entrypoint.sh ./
 RUN chmod 777 ./docker-entrypoint.sh
 
@@ -14,5 +19,7 @@ RUN conda env create -f ./environment.yml
 RUN echo "source activate $(head -1 ./environment.yml | cut -d' ' -f2)" > ~/.bashrc
 ENV PATH /opt/conda/envs/$(head -1 ./environment.yml | cut -d' ' -f2)/bin:$PATH
 
-RUN chmod -R 777 ./
+RUN chmod -R 777 /app
+WORKDIR /app
+
 CMD ["./docker-entrypoint.sh"]
