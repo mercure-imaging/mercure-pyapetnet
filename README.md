@@ -28,7 +28,8 @@ The mercure-pyapetnet module requires that mercure provides a single MRI series 
 <br>
 <br>
 
-![image](https://github.com/mercure-imaging/mercure-pyapetnet/assets/61509531/59a815b3-5ff1-4357-b506-4d926c87d636)
+![image](https://github.com/mercure-imaging/mercure-pyapetnet/assets/61509531/96f2c5c4-05ff-482f-811c-c91d8466632c)
+
 
 <br>
 <br>
