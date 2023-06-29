@@ -8,7 +8,7 @@ Mercure module to deploy [pyapetnet](https://github.com/gschramm/pyapetnet) - a 
 ## **Installation**
 
 ### Add module to existing mercure installation
-Follow instructions on [mercure website](https://mercure-imaging.org) on how to add a new module. Use the docker tag *mercureimaging/mercure-pyapetnet*.
+Follow instructions on [mercure website](https://mercure-imaging.org) on how to add a new module. Use the docker tag mercureimaging/mercure-pyapetnet.
 
 <br>
 
