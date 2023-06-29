@@ -18,3 +18,13 @@ Follow instructions on [mercure website](https://mercure-imaging.org) on how to 
 `docker run -it -v /input_data:/input -v /output_data:/output --env MERCURE_IN_DIR=/input  --env MERCURE_OUT_DIR=/output *mercureimaging/mercure-pyapetnet*`
 
 <br>
+
+
+
+<br>
+<br>
+
+![](./PYAPETNET_mercure_rule.png)
+
+<br>
+<br>
