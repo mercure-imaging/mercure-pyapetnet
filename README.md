@@ -21,6 +21,8 @@ Follow instructions on [mercure website](https://mercure-imaging.org) on how to 
 <br>
 
 ## **Configuration**
+
+### Enforce MRI and PET series filtering
 The mercure-pyapetnet module requires that mercure provides a single MRI series and a single PET series for processing. Therefore, it is important that the processing rules are configured to filter out any surplus data received by mercure, an example is shown in the screenshot below where the rule will select series containing 'MPRAGE' or 'PET_AC' in the series description, and processing will be triggered when both series have been received. More information on mercure rule configuration can be found [here.](https://mercure-imaging.org/docs/usage.html)
 
 <br>
@@ -30,3 +32,16 @@ The mercure-pyapetnet module requires that mercure provides a single MRI series 
 
 <br>
 <br>
+
+### Selecting different trained models
+By default the mercure pyapetnet will select **S2_osem_b10_fdg_pe2i** but other models can be selected easily in the processing module 'Settings' tab as show in the screenshot below.
+
+<br>
+<br>
+
+![image](https://github.com/mercure-imaging/mercure-pyapetnet/assets/61509531/6c1fa463-d563-47dc-a252-b9f5f4a196a5)
+
+<br>
+<br>
+
+
