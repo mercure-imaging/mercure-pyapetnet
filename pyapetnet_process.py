@@ -58,7 +58,7 @@ def main(args=sys.argv[1:]):
         settings.update(task["process"].get("settings", {}))
 
     
-    # create directories for PET and MRI input files
+    # create directories for PET and MRI input files, and CNN output
     current_dir = os.getcwd()
     pet_input_path = os.path.join(current_dir, 'pet_input')
     if not os.path.exists(pet_input_path):
@@ -67,6 +67,11 @@ def main(args=sys.argv[1:]):
     mri_input_path = os.path.join(current_dir, 'mri_input')
     if not os.path.exists(mri_input_path):
         os.makedirs(mri_input_path)
+
+    #create output dir for cnn
+    cnn_output_path = os.path.join(current_dir, 'cnn_output')
+    if not os.path.exists(cnn_output_path):
+        os.makedirs(cnn_output_path)
 
     #read modality and move to relevant input directories
     series = []
@@ -102,7 +107,17 @@ def main(args=sys.argv[1:]):
     selected_model=settings["trained_model"]
     
     #run pyapetnet
-    subprocess.run(["pyapetnet_predict_from_dicom", pet_input_path, mri_input_path, selected_model, "--output_dir", out_folder])
+    subprocess.run(["pyapetnet_predict_from_dicom", pet_input_path, mri_input_path, selected_model, "--output_dir", cnn_output_path])
+
+    results_path = os.path.join(cnn_output_path, 'prediction_' + selected_model)
+    
+
+    if Path(results_path).exists():
+        results_files = os.listdir(results_path)
+        for f in results_files:
+            shutil.move(os.path.join(results_path, f), out_folder)
+
+
 
 
 

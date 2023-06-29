@@ -136,3 +136,4 @@ out/
 *.ipynb
 mri_input/
 pet_input/
+cnn_input/
