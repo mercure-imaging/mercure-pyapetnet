@@ -16,7 +16,7 @@ Follow instructions on [mercure website](https://mercure-imaging.org) on how to 
 1. Clone repo.
 2. Build Docker container locally by running make (modify makefile with new docker tag as needed).
 3. Test container :\
-`docker run -it -v /input_data:/input -v /output_data:/output --env MERCURE_IN_DIR=/input  --env MERCURE_OUT_DIR=/output *mercureimaging/mercure-pyapetnet*`
+`docker run -it -v /input_data:/input -v /output_data:/output --env MERCURE_IN_DIR=/input  --env MERCURE_OUT_DIR=/output mercureimaging/mercure-pyapetnet`
 
 <br>
 
