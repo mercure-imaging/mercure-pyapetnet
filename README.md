@@ -2,6 +2,7 @@
 <br>
 
 Mercure module to deploy [pyapetnet](https://github.com/gschramm/pyapetnet) - a convolutional neural network (CNN) to mimick the behavior of anatomy-guided PET reconstruction in image space. This module runs as a docker container in mercure, it can be added to an existing mercure installation using docker tag : *mercureimaging/mercure-pyapetnet*.
+
 <br>
 
 ## **Installation**
@@ -24,7 +25,7 @@ Follow instructions on [mercure website](https://mercure-imaging.org) on how to 
 <br>
 <br>
 
-![](./PYAPETNET_mercure_rule.png)
+![](./rule.png)
 
 <br>
 <br>
