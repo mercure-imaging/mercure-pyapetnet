@@ -28,7 +28,7 @@ The mercure-pyapetnet module requires that mercure provides a single MRI series 
 <br>
 <br>
 
-![image](https://github.com/mercure-imaging/mercure-pyapetnet/assets/61509531/d509c88d-33f1-40f4-99b7-cbc8fbbc08df)
+![image](series_filter.png)
 
 <br>
 <br>
@@ -39,7 +39,7 @@ By default the module will select the pyapetnet **S2_osem_b10_fdg_pe2i** trained
 <br>
 <br>
 
-![image](https://github.com/mercure-imaging/mercure-pyapetnet/assets/61509531/6c1fa463-d563-47dc-a252-b9f5f4a196a5)
+![image](select_model.png)
 
 <br>
 <br>
