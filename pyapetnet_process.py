@@ -51,7 +51,7 @@ def main(args=sys.argv[1:]):
         sys.exit(1)
 
     # Create default values for all module settings
-    settings = {"trained_model": "S2_osem_b10_fdg_pe2i"}
+    settings = {"trained_model": "S2_osem_b10_fdg_pe2i", "series_desc": "Bowsher_" , "series_suffix":"DEFAULT"}
 
     # Overwrite default values with settings from the task file (if present)
     if task.get("process", ""):
@@ -105,9 +105,11 @@ def main(args=sys.argv[1:]):
                 sys.exit(1)
     
     selected_model=settings["trained_model"]
+    series_desc=settings["series_desc"]
+    series_suffix=settings["series_suffix"]
     
     #run pyapetnet
-    subprocess.run(["pyapetnet_predict_from_dicom", pet_input_path, mri_input_path, selected_model, "--output_dir", cnn_output_path])
+    subprocess.run(["pyapetnet_predict_from_dicom", pet_input_path, mri_input_path, selected_model, "--output_dir", cnn_output_path,"--series_description", series_desc,"--series_description_suffix", series_suffix])
 
     results_path = os.path.join(cnn_output_path, 'prediction_' + selected_model)
     
