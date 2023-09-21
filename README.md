@@ -34,7 +34,13 @@ The mercure-pyapetnet module requires that mercure provides a single MRI series 
 <br>
 
 ### Selecting different trained models
-By default the module will select the pyapetnet **S2_osem_b10_fdg_pe2i** trained model. Other models can be selected easily in the processing module 'Settings' tab as show in the screenshot below.
+By default the module will select the pyapetnet **S2_osem_b10_fdg_pe2i** trained model. Other models can be selected easily in the processing module 'Settings' tab as shown in the screenshot below. The series description of the output DICOM files can also be set. Current settings available with default values are listed below.
+
+"trained_model": "S2_osem_b10_fdg_pe2i"
+
+"series_desc": "Bowsher_"
+
+"series_suffix":"DEFAULT"
 
 <br>
 <br>
